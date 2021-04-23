@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/application/ClientApp.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/application/ServerApp.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/application/StartServer.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/client/Client.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/client/ClientChatAdapter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/client/ClientConnectionException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/gui/ChatFrame.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/gui/SubmitActionListener.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/server/AuthService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/server/Chat.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/L2_DataBases/Exercises/server/ClientHandler.java" charset="windows-1251" />
+  </component>
+</project>
