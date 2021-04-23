@@ -17,6 +17,7 @@ public class Client2 extends JFrame {
     PrintWriter writer;
     Socket sock;
 
+    // 1. Добавить в сетевой чат запись локальной истории в текстовый файл на клиенте.
     public static void recordChatHistory(String message) {
         File file = new File("src/homework_3/Client2/chatHistory2.txt");
         if (!file.exists()) {
@@ -35,6 +36,7 @@ public class Client2 extends JFrame {
         }
     }
 
+    // 2. После загрузки клиента показывать ему последние строки чата.
     private void readLastLines(int lastLines) {
 
         File file = new File("src/homework_3/Client2/chatHistory2.txt");
@@ -123,6 +125,7 @@ public class Client2 extends JFrame {
         public void run() {
             String message;
 
+            // использование метода
             readLastLines(10);
 
             try {
