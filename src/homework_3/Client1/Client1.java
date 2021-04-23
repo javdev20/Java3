@@ -36,7 +36,8 @@ public class Client1 extends JFrame {
         }
     }
 
-    // 2. После загрузки клиента показывать ему последние 100 строк чата.
+    // 2. После загрузки клиента показывать ему последние строки чата.
+    
     private void readLastLines(int lastLines) {
 
         File file = new File("src/homework_3/Client1/chatHistory1.txt");
