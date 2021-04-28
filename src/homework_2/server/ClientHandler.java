@@ -29,6 +29,9 @@ public class ClientHandler {
 			new Thread(() -> {
 				boolean isExit = false;
 				try {
+//				2. Добавить отключение неавторизованных пользователей по таймауту (120 сек. ждём после подключения
+//				клиента, и если он не авторизовался за это время, закрываем соединение).
+					socket.setSoTimeout(12000);
 					while (true) {
 						String str = in.readUTF();
 						if (str.startsWith("/auth")){
@@ -47,7 +50,7 @@ public class ClientHandler {
 								sendMsg("Неверный логин/пароль");
 							}
 						}
-						// регистрация
+						// 1. Добавить в сетевой чат авторизацию через базу данных SQLite.
 						if (str.startsWith("/signup ")) {
 							String[] tokens = str.split(" ");
 							int result = AuthService.addUser(tokens[1], tokens[2], tokens[3]);
