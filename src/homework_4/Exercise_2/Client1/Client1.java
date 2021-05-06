@@ -1,4 +1,4 @@
-package homework_3.Client1;
+package homework_4.Exercise_2.Client1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,8 +36,7 @@ public class Client1 extends JFrame {
         }
     }
 
-    // 2. После загрузки клиента показывать ему последние строки чата.
-    
+    // 2. После загрузки клиента показывать ему последние 100 строк чата.
     private void readLastLines(int lastLines) {
 
         File file = new File("src/homework_3/Client1/chatHistory1.txt");

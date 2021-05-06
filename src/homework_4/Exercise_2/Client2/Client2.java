@@ -1,4 +1,4 @@
-package homework_3.Client1;
+package homework_4.Exercise_2.Client2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client1 extends JFrame {
+public class Client2 extends JFrame {
 
     JTextArea incoming;
     JTextField outgoing;
@@ -19,7 +19,7 @@ public class Client1 extends JFrame {
 
     // 1. Добавить в сетевой чат запись локальной истории в текстовый файл на клиенте.
     public static void recordChatHistory(String message) {
-        File file = new File("src/homework_3/Client1/chatHistory1.txt");
+        File file = new File("src/homework_3/Client2/chatHistory2.txt");
         if (!file.exists()) {
             try {
                 file.createNewFile();
@@ -37,10 +37,9 @@ public class Client1 extends JFrame {
     }
 
     // 2. После загрузки клиента показывать ему последние строки чата.
-    
     private void readLastLines(int lastLines) {
 
-        File file = new File("src/homework_3/Client1/chatHistory1.txt");
+        File file = new File("src/homework_3/Client2/chatHistory2.txt");
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             List<String> lines = new ArrayList<>();
             String line;
@@ -65,7 +64,7 @@ public class Client1 extends JFrame {
     }
 
     public void go() {
-        JFrame frame = new JFrame("Client 1");
+        JFrame frame = new JFrame("Client 2");
         JPanel mainPanel = new JPanel();
         incoming = new JTextArea(15, 50);
         incoming.setLineWrap(true);
@@ -127,7 +126,7 @@ public class Client1 extends JFrame {
             String message;
 
             // использование метода
-            readLastLines(5);
+            readLastLines(10);
 
             try {
                 while ((message = reader.readLine()) != null) {
