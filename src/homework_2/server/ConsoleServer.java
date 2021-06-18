@@ -1,5 +1,6 @@
 ﻿package homework_2.server;
 
+import org.apache.log4j.Logger;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -11,7 +12,8 @@ import java.util.Vector;
 
 public class ConsoleServer {
 	private Vector<ClientHandler> users;
-
+	private final Logger file = Logger.getLogger("file");
+	
 	public ConsoleServer() {
 		users = new Vector<>();
 		ServerSocket server = null; // наша сторона
@@ -21,10 +23,12 @@ public class ConsoleServer {
 			AuthService.connect();
 			server = new ServerSocket(6001);
 			System.out.println("Server started");
-
+			file.info("Server started. Waiting for clients...");
+			
 			while (true) {
 				socket = server.accept();
-				System.out.printf("Client [%s] try to connect\n", socket.getInetAddress());
+				System.out.printf("Client [%s] connected\n", socket.getInetAddress());
+				 file.info("Client connected");
 				new ClientHandler(this, socket);
 			}
 
@@ -33,6 +37,7 @@ public class ConsoleServer {
 		} finally {
 			try {
 				System.out.printf("Client [%s] disconnected", socket.getInetAddress());
+				 file.info("Client disconnected");
 				socket.close();
 			} catch (IOException e) {
 				e.printStackTrace();
